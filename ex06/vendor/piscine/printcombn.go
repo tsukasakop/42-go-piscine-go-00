@@ -5,7 +5,7 @@ import "ft"
 func IsIncreasingN(i, n int) bool {
 	prev := 10
 	for i > 0 {
-		if i % 10 >= prev {
+		if i%10 >= prev {
 			break
 		}
 		prev = i % 10
@@ -16,10 +16,10 @@ func IsIncreasingN(i, n int) bool {
 }
 
 func PrintPosNbr(n int) {
-	if n / 10 > 0 {
-		PrintPosNbr(n/10)
+	if n/10 > 0 {
+		PrintPosNbr(n / 10)
 	}
-	ft.PrintRune('0' + int32(n % 10))
+	ft.PrintRune('0' + int32(n%10))
 }
 
 func PrintCombN(n int) {
@@ -28,7 +28,7 @@ func PrintCombN(n int) {
 	for i := 0; i < n; i++ {
 		lim *= 10
 	}
-	for i :=0; i<lim; i++ {
+	for i := 0; i < lim; i++ {
 		if !IsIncreasingN(i, n) {
 			continue
 		}
