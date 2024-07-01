@@ -9,7 +9,7 @@ init_hash=`git rev-list $ORGN_BR | tail -1`
 
 if ! git branch | grep " ${SBMT_BR}$" &> /dev/null
 then
-  git branch submit $init_hash
+  git branch $SBMT_BR $init_hash
 fi
 git switch $SBMT_BR 1> /dev/null
 
